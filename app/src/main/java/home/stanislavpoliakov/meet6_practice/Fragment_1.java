@@ -8,6 +8,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+
+/**
+ * Обычный статический фрагмент, который объявлен в Layout Activity_main.xml
+ */
+
 public class Fragment_1 extends Fragment {
 
     public static Fragment_1 newInstance() {

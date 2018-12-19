@@ -28,6 +28,10 @@ public class Fragment_2 extends Fragment {
         return view;
     }
 
+    /**
+     * Поскольку этот фрагмент создается динамически, инициализация кнопки и обработка ее нажатия
+     * происходят в теле фрагмента
+     */
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -35,7 +39,13 @@ public class Fragment_2 extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d(LOG_TAG, "Fragment 2: Button Clicked");
+                //Log.d(LOG_TAG, "Fragment 2: Button Clicked");
+
+                //Производим замену фрагмента в FrameLayout прямо изнутри самого фрагмента, а не из
+                //Activity. То есть технически из Activity, но получаем эту ссылку на Activity внутри
+                //фрагмента. Это позволяет нам не реализовывать интерфейс передачи управления из фрагмента
+                //в Activity, а значит - не плодить методы поведения.
+
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.layout_for_fragment_2, Fragment_3.newInstance())
                         .addToBackStack(null)
