@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Практика 6 урока</string>
+    <string name="service_message">Здесь будет сообщение сервиса</string>
+    <string name="button_text">Запустить фрагмент</string>
+</resources>
