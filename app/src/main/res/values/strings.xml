@@ -2,4 +2,7 @@
     <string name="app_name">Практика 6 урока</string>
     <string name="service_message">Здесь будет сообщение сервиса</string>
     <string name="button_text">Запустить фрагмент</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
